@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>VPN CHECKER</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <link href="assets/img/map-icon-png-vector-format-png-favpng-SwT3fkihcFphPUsrfz8zy4RnC.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/map-icon-png-vector-format-png-favpng-SwT3fkihcFphPUsrfz8zy4RnC.jpg" alt="">
+        <span>vpnchecker</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#tool">Tool</a></li>
+
+
+
+          <li><a class="nav-link scrollto" href="#about">About IP</a></li>
+
+          <li><a class="getstarted scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 >VPN IP Address Check
+          </h1>
+          <h2>Use our free IP detection tool to check your current IP address.
+          </h2>
+          <div >
+            <div class="text-center text-lg-start">
+              <a href="#tool"
+                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Know More</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img">
+          <img src="assets/img/map-icon-png-vector-format-png-favpng-SwT3fkihcFphPUsrfz8zy4RnC.jpg" class="img-fluid"
+            alt="" height="300" width="450">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+
+  <div id="tool">
+
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title">VPN CHECKER</h1>
+        <h3 class="card-text">Check Your Vpn Is Connected Or Not If Connected Then Which Location</h3>
+      </div>
+    </div>
+
+
+    <div class="justify-content-center container ">
+
+
+
+
+
+
+      <div class="col-lg-6 clearfix justify-content-around ">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title text-danger">IP Address Details--Check if this IP a VPN</h3>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="container">
+<div class="d-flex formap">
+
+<div class="panel-body col-lg-6  ">
+  <table class="table table-responsive">
+    <tbody>
+      <tr class="table-success ">
+        <td class="table-success ">IP Address </td>
+        <td> : </td>
+        <td><span id="query"></span></td>
+      </tr>
+      <tr>
+        <td>ISP </td>
+        <td> : </td>
+        <td> <span id="isp"></span> </td>
+      </tr>
+      <tr>
+        <td>ORG </td>
+        <td> : </td>
+        <td> <span id="org"></span> </td>
+      </tr>
+      <tr>
+        <td>Country </td>
+        <td> : </td>
+        <td> <span id="country"></span> </td>
+      </tr>
+      <tr>
+        <td>Country Code </td>
+        <td> : </td>
+        <td> <span id="countryCode"></span> </td>
+      </tr>
+      <tr>
+        <td>timezone </td>
+        <td> : </td>
+        <td> <span id="timezone"></span> </td>
+      </tr>
+
+      <tr>
+        <td>RegionName </td>
+        <td> : </td>
+        <td> <span id="regionName"></span> </td>
+      </tr>
+
+      <tr>
+        <td>Region Code </td>
+        <td> : </td>
+        <td> <span id="region"></span> </td>
+      </tr>
+      <tr>
+        <td>City </td>
+        <td> : </td>
+        <td> <span id="city"></span> </td>
+      </tr>
+      <tr>
+        <td>Postal Code </td>
+        <td> : </td>
+        <td> <span id="zip"></span> </td>
+      </tr>
+
+      <tr>
+        <td>Latitude </td>
+        <td> : </td>
+        <td> <span id="lat"></span> </td>
+      </tr>
+
+      <tr>
+        <td>Longitude </td>
+        <td> : </td>
+        <td> <span id="lon"></span> </td>
+      </tr>
+
+      <tr>
+        <td>currency </td>
+        <td> : </td>
+        <td> <span id="currency"></span> </td>
+      </tr>
+
+
+
+
+    </tbody>
+  </table>
+</div>
+
+<div class="col-lg-6  clearfix justify-content-around ">
+
+  <div id='map' style='width: 400px; height: 300px;'></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZWs0ODg5IiwiYSI6ImNrdGN4YmFyaDBoMXUyenRkbzExejdqemUifQ.aVTsXdbjIckQqU7vZlFnRg';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 3,
+        center:[80.7277,20.0695 ],
+    });
+  </script> 
+</div>
+</div>
+</div>
+      
+      
+
+
+    </div>
+    
+      
+  
+    
+
+  </div>
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h2>What can your IP address reveal about you?
+              </h2>
+              <h4> At first glance, your IP can reveal a lot of information about you, including:
+                <br>
+
+                ZIP Code,
+
+                City,
+
+
+                State,
+
+                Country,
+
+                Internet Service,
+
+
+                Device,
+
+
+                Browser,
+
+              </h4>
+              <p>
+
+              </p>
+
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h2>How to Detect VPN IP Addresses?
+              </h2>
+              <h4> it's very easy to accurately check if an IP addresses belong to a VPN provider. The VPN IP address
+                can also be analyzed for risk analysis, location, and behavior history and similar data.
+
+              </h4>
+              <p>
+
+              </p>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+    </section><!-- End About Section -->
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </header>
+
+
+
+
+
+
+        <div class="col-lg-6 ">
+          <form action="#" method="post" class="php-email-form">
+            <div class="row gy-4">
+
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              </div>
+
+              <div class="col-md-6 ">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+              </div>
+
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+              </div>
+
+              <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                <button type="submit">Send Message</button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+
+
+
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>vpnchecker</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+
+        Made by Krish with ❤️
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+  <script src="index.js"></script>
+
+
+</body>
+
+</html>
