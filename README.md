@@ -1,6 +1,6 @@
 # vpnchecker
 
-vpn checker app web besed on html,css,restapi,bootstrap and javascript
+vpn checker app web besed on html,css,bootstrap,mapbox api ,restapi and javascript
 
 
 
